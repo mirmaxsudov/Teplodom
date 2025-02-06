@@ -1,0 +1,6 @@
+.show-all-categories {
+  background: linear-gradient(180deg, #0077b6 0%, #003661 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

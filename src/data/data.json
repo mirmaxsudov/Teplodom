@@ -1,0 +1,163 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "title": "Пеноплекс Основа",
+            "price": "14.600",
+            "image": "src\\assets\\images\\productImage.png",
+            "description": "Синтетический теплоизоляционный материал, впервые созданный в США в 1941 году. Экструзионный пенополистирол имеет широкую сферу применения."
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "title": "Сухи смеси",
+            "image": "\\images\\categories\\c1.png"
+        },
+        {
+            "id": 2,
+            "title": "Хоз товары",
+            "image": "\\images\\categories\\c2.png"
+        },
+        {
+            "id": 3,
+            "title": "Лакокрасочная материали",
+            "image": "\\images\\categories\\c3.png"
+        },
+        {
+            "id": 4,
+            "title": "ИЗАЛЯЦИОННЫЕ МАТЕРИАЛИ",
+            "image": "\\images\\categories\\c4.png"
+        },
+        {
+            "id": 5,
+            "title": "саморезы",
+            "image": "\\images\\categories\\c5.png"
+        },
+        {
+            "id": 6,
+            "title": "саморезы",
+            "image": "\\images\\categories\\c6.png"
+        },
+        {
+            "id": 7,
+            "title": "Каркас для ГКЛ",
+            "image": "\\images\\categories\\c7.png"
+        },
+        {
+            "id": 8,
+            "title": "Товары для сада",
+            "image": "\\images\\categories\\c8.png"
+        },
+        {
+            "id": 9,
+            "title": "Листовые материалы",
+            "image": "\\images\\categories\\c9.png"
+        },
+        {
+            "id": 10,
+            "title": "Металлопрокат",
+            "image": "\\images\\categories\\c10.png"
+        },
+        {
+            "id": 11,
+            "title": "Крепежи",
+            "image": "\\images\\categories\\c11.png"
+        },
+        {
+            "id": 12,
+            "title": "Химическая продукция",
+            "image": "\\images\\categories\\c12.png"
+        },
+        {
+            "id": 13,
+            "title": "Ручные инструменты",
+            "image": "\\images\\categories\\c13.png"
+        },
+        {
+            "id": 14,
+            "title": "Сантехника",
+            "image": "\\images\\categories\\c14.png"
+        },
+        {
+            "id": 15,
+            "title": "Пиломатериалы",
+            "image": "\\images\\categories\\c15.png"
+        },
+        {
+            "id": 16,
+            "title": "Водосточные системы",
+            "image": "\\images\\categories\\c16.png"
+        },
+        {
+            "id": 17,
+            "title": "Напольные покрытия",
+            "image": "\\images\\categories\\c17.png"
+        },
+        {
+            "id": 18,
+            "title": "Сайдинг",
+            "image": "\\images\\categories\\c18.png"
+        },
+        {
+            "id": 19,
+            "title": "ЖБИ изделия",
+            "image": "\\images\\categories\\c19.png"
+        },
+        {
+            "id": 20,
+            "title": "Сыпучие строительные",
+            "image": "\\images\\categories\\c20.png"
+        },
+        {
+            "id": 21,
+            "title": "Инструменты штукатурные",
+            "image": "\\images\\categories\\c21.png"
+        },
+        {
+            "id": 22,
+            "title": "Агрохимия",
+            "image": "\\images\\categories\\c22.png"
+        },
+        {
+            "id": 23,
+            "title": "Лепной Декор",
+            "image": "\\images\\categories\\c23.png"
+        },
+        {
+            "id": 24,
+            "title": "Вентиляция",
+            "image": "\\images\\categories\\c24.png"
+        },
+        {
+            "id": 25,
+            "title": "Дренажные системы",
+            "image": "\\images\\categories\\c25.png"
+        },
+        {
+            "id": 26,
+            "title": "Электро техника",
+            "image": "\\images\\categories\\c26.png"
+        },
+        {
+            "id": 27,
+            "title": "Двери и Окна",
+            "image": "\\images\\categories\\c27.png"
+        },
+        {
+            "id": 28,
+            "title": "Мебель",
+            "image": "\\images\\categories\\c28.png"
+        },
+        {
+            "id": 29,
+            "title": "Плинтус",
+            "image": "\\images\\categories\\c29.png"
+        },
+        {
+            "id": 30,
+            "title": "Мастер",
+            "image": "\\images\\categories\\c30.png"
+        }
+    ]
+}
