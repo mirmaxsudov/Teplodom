@@ -30,7 +30,7 @@ const Sort = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -300 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden fixed w-[100%] top-0 left-0 p-5 bg-[#fff] h-[100vh] z-50"
+              className="md:hidden fixed w-[100%] top-0 left-0 p-5 bg-[#fff] h-[100vh] z-[500]"
             >
               <div
                 className={`md:hidden transition-all duration-500 fixed w-[100%] top-0 left-0 p-5 bg-[#fff] h-[100vh]`}

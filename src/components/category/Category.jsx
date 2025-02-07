@@ -15,8 +15,6 @@ const Category = () => {
   const [categories, setCategories] = useState([]);
   const dispatch = useDispatch();
 
-  console.log(categories);
-
   useEffect(() => {
     if (status === "idle")
       dispatch(

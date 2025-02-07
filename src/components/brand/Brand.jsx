@@ -69,12 +69,18 @@ const Brand = () => {
           </div>
           <div className="brands-wrapper lg:justify-around flex flex-nowrap overflow-x-auto items-center gap-[10px] justify-start">
             {brands.map((brand) => (
-              <div className="brand-item flex items-center justify-center flex-shrink-0 w-[128px] h-[128px] sm:w-[193px] sm:h-[181px] bg-[#fff] rounded-[12px]" key={brand}>
-                <img className="w-[106px] h-[px] sm:size-[160px]" src={brand} alt="brand" />
+              <div
+                className="brand-item flex items-center justify-center flex-shrink-0 w-[128px] h-[128px] sm:w-[193px] sm:h-[181px] bg-[#fff] rounded-[12px]"
+                key={brand}
+              >
+                <img
+                  className="w-[106px] h-[px] sm:size-[160px]"
+                  src={brand}
+                  alt="brand"
+                />
               </div>
             ))}
           </div>
-
         </div>
       </section>
     </>
