@@ -1,17 +1,17 @@
 {
-    "functions": {
-        "api/**/*.js": {
-            "runtime": "nodejs18.x",
-            "includeFiles": "src/data/data.json"
-        }
-    },
-    "builds": [
-        {
-            "src": "index.html",
-            "use": "@vercel/static-build",
-            "config": {
-                "distDir": "dist"
-            }
-        }
-    ]
+  "functions": {
+    "api/**/*.js": {
+      "runtime": "nodejs18.x",
+      "includeFiles": "src/data/data.json"
+    }
+  },
+  "builds": [
+    {
+      "src": "index.html",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ]
 }

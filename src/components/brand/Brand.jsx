@@ -1,3 +1,5 @@
+import "./Brand.css";
+
 import KBT from "../../assets/images/brand/kbt.png";
 import Total from "../../assets/images/brand/total.png";
 import UzKabel from "../../assets/images/brand/uzkabel.png";
@@ -9,8 +11,8 @@ const Brand = () => {
 
   return (
     <>
-      <section className="brand-section py-[60px]">
-        <div className="container mx-auto px-[150px]">
+      <section>
+        <div className="container mx-auto px-[30px] sm:px-[30px] lg:px-[150px]">
           <div className="top flex justify-between items-center">
             <h3 className="font-semibold text-[30px] my-5">Бренды</h3>
             <div className="flex items-center gap-[16px]">
@@ -26,7 +28,7 @@ const Brand = () => {
                     <path
                       d="M12.0903 14L19.617 7.10072C20.3606 6.41911 20.3606 5.24682 19.617 4.56521C18.9594 3.96252 17.9503 3.96251 17.2928 4.56521L8.6084 12.5257C7.74364 13.3183 7.74364 14.6817 8.6084 15.4743L17.2928 23.4348C17.9503 24.0375 18.9594 24.0375 19.617 23.4348C20.3606 22.7532 20.3606 21.5809 19.617 20.8993L12.0903 14Z"
                       fill="black"
-                      fill-opacity="0.4"
+                      fillOpacity="0.4"
                     />
                   </g>
                   <defs>
@@ -65,13 +67,14 @@ const Brand = () => {
               </button>
             </div>
           </div>
-          <div className="flex items-center gap-[10px] justify-between">
+          <div className="brands-wrapper lg:justify-around flex flex-nowrap overflow-x-auto items-center gap-[10px] justify-start">
             {brands.map((brand) => (
-              <div className="brand-item" key={brand}>
-                <img className="w-[80%]" src={brand} alt="brand" />
+              <div className="brand-item flex items-center justify-center flex-shrink-0 w-[128px] h-[128px] sm:w-[193px] sm:h-[181px] bg-[#fff] rounded-[12px]" key={brand}>
+                <img className="w-[106px] h-[px] sm:size-[160px]" src={brand} alt="brand" />
               </div>
             ))}
           </div>
+
         </div>
       </section>
     </>

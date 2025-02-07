@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import SortItem from "./item/SortItem";
 import { v4 as uuid } from "uuid";
 import Logo from "../../assets/logo.png";
-import "./Sort.css";
 import { IoCloseSharp, IoSearch } from "react-icons/io5";
 import { useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
+import "./Sort.css";
 
 const Sort = () => {
   const [isOpenSidebar, setIsOpenSidebar] = useState(false);
@@ -21,54 +22,68 @@ const Sort = () => {
     <section className="sort-section py-[30px] lg:px-[150px] bg-[#FAFAFA]">
       <div className="container mx-auto px-[50px] md:px-[20px]">
         {/* For Mobile & Sidebar */}
-        <div
-          className={`${isOpenSidebar ? "block" : "hidden"} md:hidden transition-all duration-500 fixed w-[100%] top-0 left-0 p-5 bg-[#fff] h-[100vh]`}
-        >
-          <Link to={"/"}>
-            <div className="logo-wrapper flex gap-[14px] items-center justify-between">
-              <div className="flex items-center gap-[14px] my-10">
-                <img
-                  className="w-[40px] h-[40px] sm:w-[70px] sm:h-[70px]"
-                  src={Logo}
-                  alt="logo"
-                />
-                <div>
-                  <h1 className="text-[18px] sm:text-[26px] logo-title font-semibold">
-                    TEPLODOM
-                  </h1>
-                  <p className="text-[9px] sm:text-[13px] font-medium">
-                    Интернет магазин <br />
-                    строй материалов
-                  </p>
-                </div>
-              </div>
-              <div>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsOpenSidebar(!isOpenSidebar)
-                  }}
-                  className="bg-[#F7F7F7] p-2 rounded-full transition-all duration-1000
+        <AnimatePresence>
+          {isOpenSidebar && (
+            <motion.div
+              key="sidebar"
+              initial={{ opacity: 0, x: -300 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -300 }}
+              transition={{ duration: 0.3 }}
+              className="md:hidden fixed w-[100%] top-0 left-0 p-5 bg-[#fff] h-[100vh] z-50"
+            >
+              <div
+                className={`md:hidden transition-all duration-500 fixed w-[100%] top-0 left-0 p-5 bg-[#fff] h-[100vh]`}
+              >
+                <Link to={"/"}>
+                  <div className="logo-wrapper flex gap-[14px] items-center justify-between">
+                    <div className="flex items-center gap-[14px] my-10">
+                      <img
+                        className="w-[40px] h-[40px] sm:w-[70px] sm:h-[70px]"
+                        src={Logo}
+                        alt="logo"
+                      />
+                      <div>
+                        <h1 className="text-[18px] sm:text-[26px] logo-title font-semibold">
+                          TEPLODOM
+                        </h1>
+                        <p className="text-[9px] sm:text-[13px] font-medium">
+                          Интернет магазин <br />
+                          строй материалов
+                        </p>
+                      </div>
+                    </div>
+                    <div>
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setIsOpenSidebar(!isOpenSidebar);
+                        }}
+                        className="bg-[#F7F7F7] p-2 rounded-full transition-all duration-1000
                                  hover:bg-[#fff] hover:transform hover:rotate-180"
-                >
-                  <IoCloseSharp className="w-[28px] h-[28px]" />
-                </button>
-              </div>
-            </div>
-          </Link>
-          <div className="categories flex flex-col gap-[10px]">
-            {/* Desktop tags */}
-            {sortItems.map((item) => {
-              return (
-                <Link to={"/"} key={uuid()}>
-                  <div className="md:text-[14px] item transition-all font-semibold duration-300 p-[10px] px-[25px] rounded-[10px] bg-[transparent] cursor-pointer hover:bg-gradient-to-b hover:from-[#ffb12a] hover:to-[#ef8100] hover:text-white">
-                    {item}
+                      >
+                        <IoCloseSharp className="w-[28px] h-[28px]" />
+                      </button>
+                    </div>
                   </div>
                 </Link>
-              );
-            })}
-          </div>
-        </div>
+                <div className="categories flex flex-col gap-[10px]">
+                  {/* Desktop tags */}
+                  {sortItems.map((item) => {
+                    return (
+                      <Link to={"/"} key={uuid()}>
+                        <div className="md:text-[14px] item transition-all font-semibold duration-300 p-[10px] px-[25px] rounded-[10px] bg-[transparent] cursor-pointer hover:bg-gradient-to-b hover:from-[#ffb12a] hover:to-[#ef8100] hover:text-white">
+                          {item}
+                        </div>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
         {/* Mobile tags */}
         <div className="flex gap-5 md:hidden">
           <button onClick={() => setIsOpenSidebar(!isOpenSidebar)}>

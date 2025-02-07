@@ -1,3 +1,9 @@
-.brand-item {
-  background-image: var(--brand);
+.brands-wrapper {
+  scrollbar-width: none;
+  -webkit-scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.brands-wrapper::-webkit-scrollbar {
+  display: none;
 }
