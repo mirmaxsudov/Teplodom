@@ -1,7 +1,5 @@
 const HomeCarousel = () => {
-    return (
-        <div>HomeCarousel</div>
-    )
-}
+  return <div>HomeCarousel</div>;
+};
 
-export default HomeCarousel
+export default HomeCarousel;

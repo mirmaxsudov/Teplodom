@@ -4,3 +4,12 @@
   background-clip: text;
   color: transparent;
 }
+
+.flex.flex-nowrap.overflow-x-auto {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.flex.flex-nowrap.overflow-x-auto::-webkit-scrollbar {
+  display: none;
+}
