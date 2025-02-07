@@ -140,15 +140,15 @@ const HomeCarousel = () => {
 
   const handleDotClick = (index) => {
     if (swiperInstance) {
-      swiperInstance.slideToLoop(index); // Navigate to the corresponding slide
-      updateDots(index); // Update the dots manually
+      swiperInstance.slideToLoop(index);
+      updateDots(index);
     }
   };
 
   const handleSmallDotClick = (index) => {
     if (smallSwiperInstance) {
-      smallSwiperInstance.slideToLoop(index); // Navigate to the corresponding slide
-      smallUpdateDots(index); // Update the dots manually
+      smallSwiperInstance.slideToLoop(index);
+      smallUpdateDots(index);
     }
   };
 

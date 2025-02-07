@@ -36,14 +36,14 @@ const Sort = () => {
                 className={`md:hidden transition-all duration-500 fixed w-[100%] top-0 left-0 p-5 bg-[#fff] h-[100vh]`}
               >
                 <Link to={"/"}>
-                  <div className="logo-wrapper flex gap-[14px] items-center justify-between">
+                <div className="logo-wrapper flex gap-[14px] items-center justify-between">
                     <div className="flex items-center gap-[14px] my-10">
                       <img
                         className="w-[40px] h-[40px] sm:w-[70px] sm:h-[70px]"
                         src={Logo}
                         alt="logo"
                       />
-                      <div>
+                    <div>
                         <h1 className="text-[18px] sm:text-[26px] logo-title font-semibold">
                           TEPLODOM
                         </h1>
