@@ -104,7 +104,7 @@ const HomeCarousel = () => {
       bg: B9,
       fg: F9,
     },
-  ]
+  ];
 
   const updateDots = (activeIndex) => {
     if (dotsContainerRef.current) {
@@ -127,11 +127,13 @@ const HomeCarousel = () => {
       for (let i = 0; i < dots.length; i++) {
         if (i === activeIndex) {
           dots[i].classList.add("bg-[#A1A1A1]");
-          dots[i].classList.add("w-[24px]")
+          dots[i].classList.add("w-[24px]");
+          dots[i].classList.remove("w-[8px]")
           dots[i].classList.remove("bg-[#DEDEDE]");
         } else {
           dots[i].classList.add("bg-[#DEDEDE]");
-          dots[i].classList.remove("w-[24px]")
+          dots[i].classList.remove("w-[24px]");
+          dots[i].classList.add("w-[8px]")
           dots[i].classList.remove("bg-[#A1A1A1]");
         }
       }
