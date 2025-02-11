@@ -156,7 +156,7 @@ const HomeCarousel = () => {
 
   return (
     <section className="home-carousel-section">
-      <div className="container mx-auto px-[10px] lg:px-[150px]">
+      <div className="container mx-auto">
         {/* For Mobile */}
         <div className="md:hidden">
           <Swiper

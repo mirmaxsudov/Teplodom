@@ -4,7 +4,7 @@ import InfoImage from "../../assets/images/info/info-img.png";
 const Info = () => {
   return (
     <section className="info-section py-20">
-      <div className="container mx-auto px-[30px] lg:px-[150px]">
+      <div className="container mx-auto">
         <h1 className="font-semibold text-[20px] sm:text-[30px] my-5">
           Интернет магазин Теплодом
         </h1>

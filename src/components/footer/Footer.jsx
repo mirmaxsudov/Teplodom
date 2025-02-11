@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-[#2D2B45]">
-      <div className="container mx-auto px-[30px] lg:px-[150px]">
+      <div className="container mx-auto">
         <div className="footer-wrapper py-[40px] sm:py-[80px]">
-          <div className="flex sm:justify-around md:justify-start lg:justify-between flex-col sm:flex-row flex-wrap gap-[30px] sm:gap-[40px]">
+          <div className="sm:justify-around flex md:justify-start lg:justify-between flex-col sm:flex-row flex-wrap gap-[30px] sm:gap-[40px]">
             <div className="first">
               <div className="location flex text-[#fff] gap-[14px] mb-[17px]">
                 <svg

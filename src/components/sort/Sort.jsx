@@ -19,8 +19,8 @@ const Sort = () => {
   ];
 
   return (
-    <section className="sort-section py-[30px] lg:px-[150px] bg-[#FAFAFA]">
-      <div className="container mx-auto px-[50px] md:px-[20px]">
+    <section className="sort-section py-[30px] bg-[#FAFAFA]">
+      <div className="container mx-auto">
         {/* For Mobile & Sidebar */}
         <AnimatePresence>
           {isOpenSidebar && (

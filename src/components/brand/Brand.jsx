@@ -12,7 +12,7 @@ const Brand = () => {
   return (
     <>
       <section>
-        <div className="container mx-auto px-[30px] sm:px-[30px] lg:px-[150px]">
+        <div className="container mx-auto">
           <div className="top flex justify-between items-center">
             <h3 className="font-semibold text-[30px] my-5">Бренды</h3>
             <div className="flex items-center gap-[16px]">
@@ -67,7 +67,7 @@ const Brand = () => {
               </button>
             </div>
           </div>
-          <div className="brands-wrapper lg:justify-around flex flex-nowrap overflow-x-auto items-center gap-[10px] justify-start">
+          <div className="brands-wrapper lg:justify-between flex flex-nowrap overflow-x-auto items-center gap-[10px] justify-start">
             {brands.map((brand) => (
               <div
                 className="brand-item flex items-center justify-center flex-shrink-0 w-[128px] h-[128px] sm:w-[193px] sm:h-[181px] bg-[#fff] rounded-[12px]"

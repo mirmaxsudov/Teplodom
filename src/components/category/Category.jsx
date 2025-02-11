@@ -26,7 +26,7 @@ const Category = () => {
   }, [status, data, dispatch]);
 
   return (
-    <div className="container mx-auto px-[30px] lg:px-[150px]">
+    <div className="container mx-auto">
       {<ShowCategories categories={categories.slice(0, 6)} />}
     </div>
   );

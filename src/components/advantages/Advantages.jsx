@@ -130,7 +130,7 @@ const Advantages = () => {
   return (
     <>
       <section className="advantages-section pt-[100px]">
-        <div className="container mx-auto px-[30px] sm:px-[40px] md:px-[10px] lg:px-[120px]">
+        <div className="container mx-auto">
           <h1 className="font-semibold text-[20px] sm:text-[30px] mb-[50px]">
             Наши преимущества
           </h1>
