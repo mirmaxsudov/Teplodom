@@ -1,0 +1,9 @@
+.team-wrapper {
+  scrollbar-width: none;
+  -webkit-scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.team-wrapper::-webkit-scrollbar {
+  display: none;
+}

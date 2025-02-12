@@ -11,11 +11,26 @@ const Sort = () => {
   const [isOpenSidebar, setIsOpenSidebar] = useState(false);
 
   const sortItems = [
-    "Товары по акции",
-    "Новинки",
-    "Поставщикам",
-    "Контакты",
-    "Возврат товара",
+    {
+      title: "Товары по акции",
+      link: "/category/discount"
+    },
+    {
+      title: "Новинки",
+      link: "/category/new"
+    },
+    {
+      title: "Поставщикам",
+      link: "/category/supplier"
+    },
+    {
+      title: "Контакты",
+      link: "/category/contacts"
+    },
+    {
+      title: "Возврат товара",
+      link: "/category/return"
+    },
   ];
 
   return (
@@ -71,9 +86,9 @@ const Sort = () => {
                   {/* Desktop tags */}
                   {sortItems.map((item) => {
                     return (
-                      <Link to={"/"} key={uuid()}>
+                      <Link to={item.link} key={uuid()}>
                         <div className="md:text-[14px] item transition-all font-semibold duration-300 p-[10px] px-[25px] rounded-[10px] bg-[transparent] cursor-pointer hover:bg-gradient-to-b hover:from-[#ffb12a] hover:to-[#ef8100] hover:text-white">
-                          {item}
+                          {item.title}
                         </div>
                       </Link>
                     );
@@ -131,7 +146,7 @@ const Sort = () => {
         {/* For Desktop */}
         <div className="hidden md:flex justify-between items-center">
           {sortItems.map((item) => (
-            <SortItem item={item} key={uuid()} />
+            <SortItem tem item={item} key={uuid()} />
           ))}
         </div>
       </div>
