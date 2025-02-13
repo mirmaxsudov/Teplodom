@@ -4,12 +4,24 @@ import "./ProductItem.css"
 import { FcLike } from 'react-icons/fc'
 import { useDispatch } from 'react-redux'
 import { toggleProductLike } from '../../../features/products/productSlice'
+import { Link, useNavigate } from 'react-router-dom'
 
 const ProductItem = ({ product }) => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const handleLikeBtn = (event) => {
+        dispatch(toggleProductLike({ productId: product.id, isLiked: product.isLiked }))
+        event.stopPropagation();
+    };
+
+    const handleDetailPage = () => {
+        navigate(`/product/${product.id}`)
+    }
+
 
     return (
-        <div className="product-item w-[255px] bg-[#fff] rounded-[15px] cursor-pointer hover:transform hover:scale-105 transition-all duration-300 shadow-sm">
+        <div onClick={() => { handleDetailPage() }} to={`/product/${product.id}`} className="product-item w-[255px] bg-[#fff] rounded-[15px] cursor-pointer hover:transform hover:scale-105 transition-all duration-300 shadow-sm">
             <div className="img-wrapper h-[202px]">
                 <img src={product.image} alt="Image" className='w-[100%] h-[100%] m-auto px-[53px] py-[27px] object-contain' />
             </div>
@@ -41,9 +53,7 @@ const ProductItem = ({ product }) => {
                         </div>
                     </button>
                     <>
-                        <button onClick={() => {
-                            dispatch(toggleProductLike({ productId: product.id, isLiked: product.isLiked }))
-                        }} className="like-btn bg-[#FFB12A] col-span-1 flex items-center justify-center py-[7px] rounded-[8px] ml-auto w-[50px] h-[50px] transition-all duration-300">
+                        <button onClick={handleLikeBtn} className="like-btn bg-[#FFB12A] col-span-1 flex items-center justify-center py-[7px] rounded-[8px] ml-auto w-[50px] h-[50px] transition-all duration-300">
                             {
                                 product.isLiked ? <FcLike className={"w-[28px] h-[28px]"} /> : <svg
                                     className='like-icon'

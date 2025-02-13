@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "json": "json-server ./src/data/data.json -w --port 5000"
   },
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",

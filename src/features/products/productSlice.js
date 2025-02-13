@@ -7,7 +7,18 @@ const initProductState = {
   error: null,
   popularProducts: [],
   newProducts: [],
+  product: null,
+  isProductLoading: false,
 };
+
+export const fetchProductById = createAsyncThunk(
+  "product/fetchProductById",
+  async (id) => {
+    const response = await fetch(`http://localhost:5000/products/${id}`);
+    const data = await response.json();
+    return data;
+  }
+);
 
 export const fetchAllProducts = createAsyncThunk(
   "product/fetchAllProducts",
@@ -54,15 +65,7 @@ const productSlice = createSlice({
         state.status = "succeeded";
         state.allProducts = action.payload;
         action.payload.sort((a, b) => b.liked - a.liked);
-
-        // console.log(action.payload, "Slice");
-        
-
         state.popularProducts = action.payload;
-
-        // console.log(state.popularProducts);
-        
-
         state.newProducts = action.payload.filter((p) => p.isNew);
       })
       .addCase(fetchAllProducts.rejected, (state, action) => {
@@ -77,7 +80,14 @@ const productSlice = createSlice({
           } else {
             return p;
           }
-        });        
+        });
+      })
+      .addCase(fetchProductById.pending, (state) => {
+        state.isProductLoading = true;
+      })
+      .addCase(fetchProductById.fulfilled, (state, action) => {
+        state.product = action.payload;
+        state.isProductLoading = false;
       });
   },
 });
