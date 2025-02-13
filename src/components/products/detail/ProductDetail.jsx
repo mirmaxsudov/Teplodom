@@ -13,10 +13,8 @@ const ProductDetail = () => {
       dispatch(fetchProductById(id));
   }, [dispatch, id]);
 
-  console.log(product);
-
   return (
-    <section className="detail-product bg-[#FAFAFA] h-full max-h-screen">
+    <section className="detail-product bg-[#FAFAFA] h-full min-h-screen">
       <div className='container mx-auto py-[50px]'>
         {
           product && <div className="grid grid-cols-3 bg-[#fff] px-[25px] py-[30px] pr-[60px] gap-[50px]">
@@ -135,9 +133,6 @@ const ProductDetail = () => {
               </div>
             </div>
           </div>
-        }
-        {
-          !product && <h1>Product not found</h1>
         }
       </div>
     </section>
