@@ -13,23 +13,23 @@ const Sort = () => {
   const sortItems = [
     {
       title: "Товары по акции",
-      link: "/category/discount"
+      link: "/category/discount",
     },
     {
       title: "Новинки",
-      link: "/category/new"
+      link: "/category/new",
     },
     {
       title: "Поставщикам",
-      link: "/category/supplier"
+      link: "/category/supplier",
     },
     {
       title: "Контакты",
-      link: "/category/contacts"
+      link: "/category/contacts",
     },
     {
       title: "Возврат товара",
-      link: "/category/return"
+      link: "/category/return",
     },
   ];
 

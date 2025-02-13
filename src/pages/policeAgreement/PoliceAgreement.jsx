@@ -4,7 +4,9 @@ const PoliceAgreement = () => {
   return (
     <section className="police-agreement-section pt-[60px] pb-[120px]">
       <div className="container mx-auto px-[150px]">
-        <h1 className="text-[30px] font-semibold mb-[30px]">Пользовательское соглашение</h1>
+        <h1 className="text-[30px] font-semibold mb-[30px]">
+          Пользовательское соглашение
+        </h1>
         <p>
           Публичная Оферта 1. Основные положения. 1.1. Данная Оферта является
           Договором интернет-магазина “Teolodomshop.com” по отношению к

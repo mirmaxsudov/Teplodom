@@ -10,26 +10,26 @@ const Team = () => {
       id: 1,
       firstName: "Ӯткуров Сардор",
       work: "Директор фирмы",
-      image: I1
+      image: I1,
     },
     {
       id: 2,
       firstName: "Рахматуллаев Хаб",
       work: "Менеджерпо продажам",
-      image: I2
+      image: I2,
     },
     {
       id: 3,
       firstName: "Усмонов Нодир",
       work: "Менеджерпо продажам",
-      image: I3
+      image: I3,
     },
     {
       id: 4,
       firstName: "Йолдошев Донийор",
       work: "Менеджерпо продажам",
-      image: I4
-    }
+      image: I4,
+    },
   ];
 
   return (
@@ -100,7 +100,9 @@ const Team = () => {
                   <img src={team.image} alt="Image" className="object-cover" />
                 </div>
                 <div className="team-item-body text-center pb-[30px]">
-                  <p className="text-[18px] font-medium mt-[30px] mb-[10px]">{team.firstName}</p>
+                  <p className="text-[18px] font-medium mt-[30px] mb-[10px]">
+                    {team.firstName}
+                  </p>
                   <p className="text-[#878787]">{team.work}</p>
                 </div>
               </div>

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const SimilarProducts = () => {
-    return (
-        <div>SimilarProducts</div>
-    )
-}
+  return <div>SimilarProducts</div>;
+};
 
-export default SimilarProducts  
+export default SimilarProducts;
