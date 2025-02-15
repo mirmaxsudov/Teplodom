@@ -21,15 +21,15 @@ const Sort = () => {
     },
     {
       title: "Поставщикам",
-      link: "/category/supplier",
+      link: "/supplier",
     },
     {
       title: "Контакты",
-      link: "/category/contacts",
+      link: "/contacts",
     },
     {
       title: "Возврат товара",
-      link: "/category/return",
+      link: "/return",
     },
   ];
 

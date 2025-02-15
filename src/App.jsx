@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Home from "./pages/Home/Home";
 import PoliceAgreement from "./pages/policeAgreement/PoliceAgreement";
 import ProductDetail from "./components/products/detail/ProductDetail";
+import Contacts from "./components/contacts/Contacts";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
             <Route path="/all-categories" element={<AllCategories />} />
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/police-agreement" element={<PoliceAgreement />} />
+            <Route path="/contacts" element={<Contacts />} />
             <Route path="*" element={<Home />} />
           </Route>
         </Routes>
