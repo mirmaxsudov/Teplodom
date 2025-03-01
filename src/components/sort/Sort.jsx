@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import SortItem from "./item/SortItem";
 import { v4 as uuid } from "uuid";
 import Logo from "../../assets/logo.png";
@@ -86,11 +86,11 @@ const Sort = () => {
                   {/* Desktop tags */}
                   {sortItems.map((item) => {
                     return (
-                      <Link to={item.link} key={uuid()}>
+                      <NavLink className="sort-item" to={item.link} key={uuid()}>
                         <div className="md:text-[14px] item transition-all font-semibold duration-300 p-[10px] px-[25px] rounded-[10px] bg-[transparent] cursor-pointer hover:bg-gradient-to-b hover:from-[#ffb12a] hover:to-[#ef8100] hover:text-white">
                           {item.title}
                         </div>
-                      </Link>
+                      </NavLink>
                     );
                   })}
                 </div>

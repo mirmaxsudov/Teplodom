@@ -1,0 +1,4 @@
+.sort-item.active {
+    background: linear-gradient(180deg, #ffb12a 0%, #ef8100 100%) !important;
+    color: #fff !important;
+}
