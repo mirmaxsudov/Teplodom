@@ -7,6 +7,8 @@ import PoliceAgreement from "./pages/policeAgreement/PoliceAgreement";
 import ProductDetail from "./components/products/detail/ProductDetail";
 import Contacts from "./components/contacts/Contacts";
 import ReturnOrder from "./components/returnOrder/ReturnOrder";
+import Basket from "./components/basket/Basket";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   return (
@@ -20,10 +22,12 @@ const App = () => {
             <Route path="/police-agreement" element={<PoliceAgreement />} />
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/return" element={<ReturnOrder />} />
+            <Route path="/basket" element={<Basket />} />
             <Route path="*" element={<Home />} />
           </Route>
         </Routes>
       </Router>
+      <ToastContainer />
       <Analytics />
     </>
   );

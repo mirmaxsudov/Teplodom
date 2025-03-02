@@ -17,7 +17,7 @@ export const fetchProductById = createAsyncThunk(
     const response = await fetch(`http://localhost:5000/products/${id}`);
     const data = await response.json();
     return data;
-  },
+  }
 );
 
 export const fetchAllProducts = createAsyncThunk(
@@ -26,7 +26,7 @@ export const fetchAllProducts = createAsyncThunk(
     const response = await fetch("http://localhost:5000/products");
     const data = await response.json();
     return data;
-  },
+  }
 );
 
 export const toggleProductLike = createAsyncThunk(
@@ -41,14 +41,14 @@ export const toggleProductLike = createAsyncThunk(
             "Content-Type": "application/json",
           },
           body: JSON.stringify({ isLiked: !isLiked }),
-        },
+        }
       );
 
       return await patchResponse.json();
     } catch (error) {
       throw error.message;
     }
-  },
+  }
 );
 
 const productSlice = createSlice({
