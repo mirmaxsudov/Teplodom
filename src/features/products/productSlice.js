@@ -15,7 +15,7 @@ const initProductState = {
 export const fetchProductById = createAsyncThunk(
   "product/fetchProductById",
   async (id) => {
-    const response = await fetch(`http://localhost:5000/products/${id}`);
+    const response = await fetch(`https://apiforteplodom.onrender.com/products/${id}`);
     const data = await response.json();
     return data;
   }
@@ -24,7 +24,7 @@ export const fetchProductById = createAsyncThunk(
 export const fetchAllProducts = createAsyncThunk(
   "product/fetchAllProducts",
   async () => {
-    const response = await fetch("http://localhost:5000/products");
+    const response = await fetch("https://apiforteplodom.onrender.com/products");
     const data = await response.json();
     return data;
   }
@@ -35,7 +35,7 @@ export const toggleProductLike = createAsyncThunk(
   async ({ productId, isLiked }) => {
     try {
       const patchResponse = await fetch(
-        `http://localhost:5000/products/${productId}`,
+        `https://apiforteplodom.onrender.com/products/${productId}`,
         {
           method: "PATCH",
           headers: {
