@@ -21,7 +21,7 @@ const Sort = () => {
     },
     {
       title: "Поставщикам",
-      link: "/supplier",
+      link: "/suppliers",
     },
     {
       title: "Контакты",
@@ -141,6 +141,7 @@ const Sort = () => {
                 fill="black"
               />
             </svg>
+
           </button>
         </div>
         {/* For Desktop */}
