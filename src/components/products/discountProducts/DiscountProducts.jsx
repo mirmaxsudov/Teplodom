@@ -28,7 +28,7 @@ const DiscountProducts = () => {
                 {
                     !isLoading && discountProducts.length === 0 && <div className='text-[40px] text-center my-4'>Товары по акции отсутствуют</div>
                 }
-                {!isLoading && discountProducts.length > 0 && <div className='grid grid-cols-4 gap-5'>
+                {!isLoading && discountProducts.length > 0 && <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5'>
                     {
                         discountProducts.map(product => <ProductItem isDiscount={true} product={product} key={product.id}></ProductItem>)
                     }
