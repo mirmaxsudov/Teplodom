@@ -5,10 +5,11 @@ const initProductState = {
   isLoading: false,
   status: "idle",
   error: null,
-  popularProducts: [],
-  newProducts: [],
   product: null,
   isProductLoading: false,
+  popularProducts: [],
+  newProducts: [],
+  discountProducts: [],
 };
 
 export const fetchProductById = createAsyncThunk(
@@ -54,7 +55,41 @@ export const toggleProductLike = createAsyncThunk(
 const productSlice = createSlice({
   name: "product",
   initialState: initProductState,
-  reducers: {},
+  reducers: {
+    toggleProductLikeForState: (state, action) => {
+      state.allProducts = state.allProducts.map((p) => {
+        if (p.id === action.payload.productId) {
+          return { ...p, isLiked: action.payload.isLiked };
+        } else {
+          return p;
+        }
+      });
+
+      state.popularProducts = state.popularProducts.map((p) => {
+        if (p.id === action.payload.productId) {
+          return { ...p, isLiked: action.payload.isLiked };
+        } else {
+          return p;
+        }
+      });
+
+      state.newProducts = state.newProducts.map((p) => {
+        if (p.id === action.payload.productId) {
+          return { ...p, isLiked: action.payload.isLiked };
+        } else {
+          return p;
+        }
+      });
+
+      state.discountProducts = state.discountProducts.map((p) => {
+        if (p.id === action.payload.productId) {
+          return { ...p, isLiked: action.payload.isLiked };
+        } else {
+          return p;
+        }
+      });
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchAllProducts.pending, (state) => {
@@ -67,6 +102,7 @@ const productSlice = createSlice({
         action.payload.sort((a, b) => b.liked - a.liked);
         state.popularProducts = action.payload;
         state.newProducts = action.payload.filter((p) => p.isNew);
+        state.discountProducts = action.payload.filter((p) => p.isDiscount);
       })
       .addCase(fetchAllProducts.rejected, (state, action) => {
         state.isLoading = false;
@@ -81,6 +117,8 @@ const productSlice = createSlice({
             return p;
           }
         });
+
+        state.discountProducts = state.allProducts.filter((p) => p.isDiscount);
       })
       .addCase(fetchProductById.pending, (state) => {
         state.isProductLoading = true;
@@ -92,4 +130,5 @@ const productSlice = createSlice({
   },
 });
 
+export const { toggleProductLikeForState } = productSlice.actions;
 export default productSlice.reducer;

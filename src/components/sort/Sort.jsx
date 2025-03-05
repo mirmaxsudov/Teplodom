@@ -13,7 +13,7 @@ const Sort = () => {
   const sortItems = [
     {
       title: "Товары по акции",
-      link: "/category/discount",
+      link: "/discount",
     },
     {
       title: "Новинки",
