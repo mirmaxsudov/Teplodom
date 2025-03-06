@@ -4,9 +4,17 @@ import { FaRegHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./Nav.css";
 import { useSelector } from "react-redux";
+import { useState } from "react";
+import Auth from "../auth/Auth";
 
 const Nav = () => {
   const basket = useSelector(state => state.basket.basket)
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(true);
+  const [authType, setAuthType] = useState("REGISTER"); // REGISTER || LOGIN
+
+  const changeType = (type) => {
+    setAuthType(type);
+  };
 
   return (
     <>
@@ -59,7 +67,9 @@ const Nav = () => {
                 />
               </div>
               <div className="like-wrapper flex items-center justify-center bg-[#fff] p-[8px] sm:p-[14px] rounded-full">
-                <FaRegHeart className="w-[28px] h-[28px]" />
+                <Link to="/favorites">
+                  <FaRegHeart className="w-[28px] h-[28px]" />
+                </Link>
               </div>
               <div className="relative shop-wrapper flex items-center justify-center bg-[#fff] p-[8px] sm:p-[14px] rounded-full">
                 <Link to="/basket">
@@ -86,7 +96,11 @@ const Nav = () => {
                   }
                 </Link>
               </div>
-              <button className="flex items-center gap-[16px] bg-[#fff] p-[8px] sm:p-[14px] rounded-[15px]">
+              <button
+                onClick={() => {
+                  setIsAuthModalOpen(true);
+                }}
+                className="flex items-center gap-[16px] bg-[#fff] p-[8px] sm:p-[14px] rounded-[15px]">
                 <svg
                   width="28"
                   height="28"
@@ -111,6 +125,14 @@ const Nav = () => {
               </button>
             </div>
           </div>
+          {
+            isAuthModalOpen && (
+              <Auth
+                changeType={changeType}
+                authType={authType}
+                onClose={() => setIsAuthModalOpen(false)} />
+            )
+          }
         </div>
       </nav>
     </>

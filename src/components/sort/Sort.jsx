@@ -144,7 +144,6 @@ const Sort = () => {
 
           </button>
         </div>
-        {/* For Desktop */}
         <div className="hidden md:flex justify-between items-center">
           {sortItems.map((item) => (
             <SortItem tem item={item} key={uuid()} />

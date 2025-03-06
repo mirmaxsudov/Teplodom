@@ -1,5 +1,6 @@
 import React from 'react'
 import Skeleton from 'react-loading-skeleton'
+import "./ProductItemLoadingSkeleton.css"
 
 const ProductItemLoadingSkeleton = ({ gridCount = 4, count = 8 }) => {
     return (
@@ -13,7 +14,7 @@ const ProductItemLoadingSkeleton = ({ gridCount = 4, count = 8 }) => {
 
 const SkeletonItem = () => {
     return (
-        <div>
+        <div className='skeleton-wrapper p-2 bg-stone-100'>
             <div className='image-loader'>
                 <Skeleton height={200} />
             </div>
@@ -24,7 +25,7 @@ const SkeletonItem = () => {
             </div>
             <div className='footer flex items-center gap-4'>
                 <Skeleton height={40} width={220} />
-                <Skeleton height={40} width={65} />
+                <Skeleton height={40} width={50} />
             </div>
         </div>
     )
