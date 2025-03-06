@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import ProductItem from "../item/ProductItem";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAllProducts } from "../../../features/products/productSlice";
+import ProductItemLoadingSkeleton from "../loading/ProductItemLoadingSkeleton";
 
 const NewProducts = ({ n = 8, isWithCategory = true }) => {
   const { isLoading, newProducts, status } = useSelector((state) => state.product);
@@ -64,6 +65,11 @@ const NewProducts = ({ n = 8, isWithCategory = true }) => {
           }
         </div>
         <div className="flex flex-wrap justify-between items-center gap-[30px]">
+          {
+            isLoading && (
+              <NewProductsSkeleton n={n} />
+            )
+          }
           {!isLoading && (
             <>
               {newProducts.slice(0, n).map((p, i) => (
@@ -77,6 +83,14 @@ const NewProducts = ({ n = 8, isWithCategory = true }) => {
   );
 };
 
-const NewProductsSkeleton = () => { };
+const NewProductsSkeleton = ({ n }) => {
+  const count = n <= 8 ? n : 10;
+
+  return (
+    <div className="flex flex-wrap justify-between items-center gap-[30px]">
+      <ProductItemLoadingSkeleton count={count} />
+    </div>
+  );
+};
 
 export default NewProducts;
