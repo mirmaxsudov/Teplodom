@@ -17,7 +17,7 @@ const Sort = () => {
     },
     {
       title: "Новинки",
-      link: "/category/new",
+      link: "/new",
     },
     {
       title: "Поставщикам",

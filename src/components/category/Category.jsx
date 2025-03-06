@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 import { motion } from "motion/react";
 import "./Category.css";
+import CategorySkeleton from "./CategorySkeleton";
 
 const Category = () => {
   const {
@@ -27,7 +28,7 @@ const Category = () => {
 
   return (
     <div className="container mx-auto">
-      {<ShowCategories categories={categories.slice(0, 6)} />}
+      {<ShowCategories isLoading={isLoading} categories={categories.slice(0, 6)} />}
     </div>
   );
 };
@@ -81,7 +82,7 @@ const ShowCategories = ({ categories, isLoading }) => {
           </Link>
         </div>
         {isLoading ? (
-          <CategorySkeleton />
+          <CategorySkeleton grid={6} count={6} />
         ) : (
           <div className="flex flex-nowrap overflow-x-auto gap-[10px] items-stretch mt-10">
             {categories.map((category) => (
@@ -109,21 +110,6 @@ export const CategoryItem = ({ category }) => {
         </div>
       </motion.div>
     </Link>
-  );
-};
-
-const CategorySkeleton = () => {
-  return (
-    <>
-      <div className="flex gap-3 mt-10 flex-nowrap overflow-x-auto items-stretch">
-        <Skeleton count={1} width={"200px"} height={"200px"} />
-        <Skeleton count={1} width={"200px"} height={"200px"} />
-        <Skeleton count={1} width={"200px"} height={"200px"} />
-        <Skeleton count={1} width={"200px"} height={"200px"} />
-        <Skeleton count={1} width={"200px"} height={"200px"} />
-        <Skeleton count={1} width={"200px"} height={"200px"} />
-      </div>
-    </>
   );
 };
 

@@ -6,7 +6,7 @@ import { fetchProductById } from "../../../features/products/productSlice";
 const ProductDetail = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const product = useSelector((state) => state.product.product);
+  const { product, isLoading } = useSelector((state) => state.product);
 
   useEffect(() => {
     window.scrollTo(0, 0);

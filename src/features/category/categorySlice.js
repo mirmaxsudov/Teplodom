@@ -10,14 +10,14 @@ const initCategoryState = {
 export const fetchAllCategories = createAsyncThunk(
   "category/fetchAllCategories",
   async ({ isAll = true, limit = 5 } = {}) => {
-    let url = "http://localhost:5000/categories";
+    let url = "https://apiforteplodom.onrender.com/categories";
 
     if (!isAll) url += `?_limit=${limit}`;
 
     const response = await fetch(url);
     const data = await response.json();
     return data;
-  },
+  }
 );
 
 const categorySlice = createSlice({
