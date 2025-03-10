@@ -9,12 +9,10 @@ import Auth from "../auth/Auth";
 
 const Nav = () => {
   const basket = useSelector(state => state.basket.basket)
-  const [isAuthModalOpen, setIsAuthModalOpen] = useState(true);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [authType, setAuthType] = useState("REGISTER"); // REGISTER || LOGIN
 
-  const changeType = (type) => {
-    setAuthType(type);
-  };
+  const changeType = type => setAuthType(type); 
 
   return (
     <>
